@@ -1,15 +1,27 @@
 
-import CommonList from './components/list/CommonList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Business from './pages/Business';
+import Navbar from './components/layout/Navbar';
+import HeaderComponent from './components/layout/HeaderComponent';
+import Footer from './components/layout/Footer';
+
 function App() {
 
-  const itens = [ 'React', 'Vue', 'AngularJS'];
+   
   return (
-    <div className="App"> 
-        {/* <CreatePerson/> */}
-        <CommonList itens={itens}/>
-        <CommonList/>
-
-    </div>
+    <Router>
+      <HeaderComponent />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/business" element={<Business />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 

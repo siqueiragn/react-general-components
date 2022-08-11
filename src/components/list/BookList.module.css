@@ -1,0 +1,21 @@
+.bookCard {
+    height: 20em;
+    width: 20em;
+    background-color: lightblue;
+}
+
+.bookCard_title {
+    font-size: 2em;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.bookCard_subtitle {
+    text-align: center;
+    width: 100%;
+}
+
+.bookShowCase {
+    display: inline-flex;
+}
